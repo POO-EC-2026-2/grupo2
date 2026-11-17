@@ -5,25 +5,9 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.DataType;
 
 @DatabaseTable(tableName = "Paciente")
-public class Paciente
+public class Paciente extends Usuario
 {   
-    @DatabaseField(generatedId = true)
-    private int idade;
     
-    @DatabaseField
-    private String nome;
-    
-    @DatabaseField
-    public String CPF;
-    
-    @DatabaseField(dataType=DataType.DATE)
-    public Date birthday;  
-    
-    @DatabaseField
-    public String endereco;
-    
-    @DatabaseField
-    public String sexo;
     
     
     
