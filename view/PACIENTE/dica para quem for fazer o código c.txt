@@ -1,0 +1,47 @@
+dica para quem for fazer o código controller:
+para aa tabelas de marcar consulta e e visualizar consulta isso pode ser útil:
+
+
+
+
+3. Coluna com botões dinâmicos (para linhas futuras)
+
+Sim, é totalmente possível. Como as linhas da tabela serão preenchidas dinamicamente em tempo de execução, você não coloca os botões diretamente pelo Scene Builder, mas sim via código Java (no seu Controller) usando uma CellFactory.
+Ao configurar a CellFactory de uma TableColumn, o JavaFX cria um botão automaticamente para cada linha que for adicionada à lista da tabela, e cada botão já saberá exatamente a qual objeto (linha) ele pertence.
+
+Exemplo prático no Controller:
+
+java
+// 1. Defina a coluna no Scene Builder com um fx:id (ex: colAcoes)
+@FXML
+private TableColumn<SeuModelo, Void> colAcoes;
+
+@FXML
+public void initialize() {
+    // 2. Configure a fábrica de células para gerar os botões
+    colAcoes.setCellFactory(param -> new TableCell<>() {
+        private final Button btn = new Button("Editar");
+
+        {
+            // Ação ao clicar no botão
+            btn.setOnAction(event -> {
+                // Pega o objeto exato da linha onde o botão foi clicado
+                SeuModelo itemDaLinha = getTableView().getItems().get(getIndex());
+                System.out.println("Botão clicado para o item: " + itemDaLinha);
+            });
+        }
+
+        @Override
+        protected void updateItem(Void item, boolean empty) {
+            super.updateItem(item, empty);
+            // Exibe o botão apenas se a linha não estiver vazia
+            if (empty) {
+                setGraphic(null);
+            } else {
+                setGraphic(btn);
+            }
+        }
+    });
+}
+Use o código com cuidado.
+Com essa abordagem, sempre que você adicionar um novo item na ObservableList vinculada à sua tabela, a nova linha já aparecerá com o respectivo botão funcional.
