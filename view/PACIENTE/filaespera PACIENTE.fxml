@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="718.0" style="-fx-background-color: #F0FAFC; -fx-background-radius: 5; -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="24.0" layoutY="14.0" text="Paciente" textFill="#1e293b">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="81.0" fitWidth="66.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../logo%20projeto%20POO%20-%20Copiateste.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <ListView layoutX="47.0" layoutY="119.0" prefHeight="6.0" prefWidth="648.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #F1F5F9; -fx-border-color: #000000;" />
+      <Button layoutX="13.0" layoutY="524.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #319F79; -fx-border-color: #000000;" text="Voltar" textFill="#334155" />
+      <ListView layoutX="479.0" layoutY="44.0" prefHeight="32.0" prefWidth="204.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #F1F5F9; -fx-border-color: #000000;" />
+      <Label layoutX="493.0" layoutY="47.0" text="Verificar fila de espera" textFill="#334155">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView layoutX="42.0" layoutY="162.0" prefHeight="356.0" prefWidth="635.0" style="-fx-background-radius: 5; -fx-border-radius: 5;">
+         <columns>
+            <TableColumn prefWidth="122.0" text="Lugar na fila" />
+            <TableColumn minWidth="0.0" prefWidth="512.0" text="Pacientes" />
+         </columns>
+      </TableView>
+      <Label layoutX="69.0" layoutY="132.0" text="Visualise abaixo o seu lugar na fila de espera:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Polygon fill="DODGERBLUE" layoutX="53.0" layoutY="105.0" points="-6.0, 45.0, 8.0, 37.0, -6.0, 30.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</Pane>
