@@ -44,4 +44,4 @@ public void initialize() {
     });
 }
 Use o código com cuidado.
-Com essa abordagem, sempre que você adicionar um novo item na ObservableList vinculada à sua tabela, a nova linha já aparecerá com o respectivo botão funcional.
+Com essa abordagem, sempre que você adicionar um novo item na ObservableList vinculada à sua tabela, a nova linha já aparecerá com o respectivo botão funcional...
