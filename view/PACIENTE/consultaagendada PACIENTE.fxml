@@ -19,7 +19,7 @@
          <graphic>
             <ImageView fitHeight="81.0" fitWidth="66.0" pickOnBounds="true">
                <image>
-                  <Image url="@../logo%20projeto%20POO%20-%20Copiateste.png" />
+                  <Image url="@../../../../Downloads/logo%20projeto%20POO%20-%20Copiateste.png" />
                </image>
             </ImageView>
          </graphic>
